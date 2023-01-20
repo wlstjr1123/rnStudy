@@ -12,8 +12,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6CB897E2C83C41CB9D557D61 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B409FF54A2134B1397EABA30 /* DancingScript-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-ch03_3-ch03_3Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ch03_3-ch03_3Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8AC21C31F7D041079A4B8048 /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BBAFAA4F07E4F1F94C23635 /* DancingScript-SemiBold.ttf */; };
+		BF7D437A476B41B5BC00BF59 /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F63EEA1169B34C1FB2167B9A /* DancingScript-Medium.ttf */; };
+		DC661ACF23284E4984DC35D4 /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56A50BF12FA447FD9713C907 /* DancingScript-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +41,17 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ch03_3/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ch03_3/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ch03_3-ch03_3Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ch03_3-ch03_3Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBAFAA4F07E4F1F94C23635 /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-SemiBold.ttf"; path = "../src/assets/fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ch03_3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ch03_3.debug.xcconfig"; path = "Target Support Files/Pods-ch03_3/Pods-ch03_3.debug.xcconfig"; sourceTree = "<group>"; };
+		56A50BF12FA447FD9713C907 /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Bold.ttf"; path = "../src/assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ch03_3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ch03_3.release.xcconfig"; path = "Target Support Files/Pods-ch03_3/Pods-ch03_3.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ch03_3-ch03_3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ch03_3-ch03_3Tests.debug.xcconfig"; path = "Target Support Files/Pods-ch03_3-ch03_3Tests/Pods-ch03_3-ch03_3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ch03_3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ch03_3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ch03_3/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ch03_3-ch03_3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ch03_3-ch03_3Tests.release.xcconfig"; path = "Target Support Files/Pods-ch03_3-ch03_3Tests/Pods-ch03_3-ch03_3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B409FF54A2134B1397EABA30 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Regular.ttf"; path = "../src/assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F63EEA1169B34C1FB2167B9A /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "DancingScript-Medium.ttf"; path = "../src/assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				E53D1C994D004839B84720BC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +155,18 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ch03_3-ch03_3Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E53D1C994D004839B84720BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56A50BF12FA447FD9713C907 /* DancingScript-Bold.ttf */,
+				F63EEA1169B34C1FB2167B9A /* DancingScript-Medium.ttf */,
+				B409FF54A2134B1397EABA30 /* DancingScript-Regular.ttf */,
+				2BBAFAA4F07E4F1F94C23635 /* DancingScript-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DC661ACF23284E4984DC35D4 /* DancingScript-Bold.ttf in Resources */,
+				BF7D437A476B41B5BC00BF59 /* DancingScript-Medium.ttf in Resources */,
+				6CB897E2C83C41CB9D557D61 /* DancingScript-Regular.ttf in Resources */,
+				8AC21C31F7D041079A4B8048 /* DancingScript-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
