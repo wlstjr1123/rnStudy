@@ -1,46 +1,40 @@
 import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {StyleSheet, FlatList} from 'react-native';
+import {useNavigation, DrawerActions} from '@react-navigation/native';
+// prettier-ignore
+import {SafeAreaView, View, UnderlineText,TopBar,
+NavigationHeader, Text} from '../theme'
 import {ScrollEnabledProvider, useScrollEnabled} from '../contexts';
 import * as D from '../data';
 import Person from './Person';
-import {
-  SafeAreaView,
-  View,
-  UnderlineText,
-  TopBar,
-  Text,
-} from '../theme/navigation';
-import {useNavigation} from '@react-navigation/native';
-import {LeftRightNavigation, LeftRightNavigationMethods} from '../components';
-import {NavigationHeader} from '../theme';
+import {LeftRightNavigation} from '../components';
+import type {LeftRightNavigationMethods} from '../components';
 
-export default function People() {
-  //navigation
+export default function Home() {
+  // navigation
   const navigation = useNavigation();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const goLeft = useCallback(() => navigation.navigate('HomeLeft'), []);
   const goRight = useCallback(
     () => navigation.navigate('HomeRight', {name: 'Jack', age: 32}),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   );
+  const open = useCallback(() => {
+    navigation.dispatch(DrawerActions.openDrawer());
+  }, [navigation]);
   const logout = useCallback(() => {
     navigation.navigate('Login');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  // for people
   const [scrollEnabled] = useScrollEnabled();
   const [people, setPeople] = useState<D.IPerson[]>([]);
-
   const leftRef = useRef<LeftRightNavigationMethods | null>(null);
-  const add = useCallback(() => {
+  const addPerson = useCallback(() => {
     setPeople(people => [D.createRandomPerson(), ...people]);
   }, []);
-  const removeAll = useCallback(() => {
-    setPeople(_notUsed => []);
+  const removeAllPersons = useCallback(() => {
+    setPeople(notUsed => []);
     leftRef.current?.resetOffset();
   }, []);
-
   const deletePerson = useCallback(
     (id: string) => () => {
       setPeople(people => people.filter(person => person.id != id));
@@ -49,33 +43,22 @@ export default function People() {
     },
     [],
   );
-
+  useEffect(() => D.makeArray(5).forEach(addPerson), []);
   const flatListRef = useRef<FlatList | null>(null);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => D.makeArray(5).forEach(add), []);
-
   return (
     <SafeAreaView>
       <ScrollEnabledProvider>
         <View style={[styles.view]}>
           <NavigationHeader
             title="Home"
+            Left={() => <Text onPress={open}>open</Text>}
             Right={() => <Text onPress={logout}>logout</Text>}
           />
-          <TopBar>
-            <UnderlineText onPress={goLeft} style={styles.text}>
-              go Left
-            </UnderlineText>
-            <UnderlineText onPress={goRight} style={styles.text}>
-              go Right
-            </UnderlineText>
-          </TopBar>
-          <TopBar>
-            <UnderlineText onPress={add} style={styles.text}>
+          <TopBar noSwitch>
+            <UnderlineText onPress={addPerson} style={styles.text}>
               add
             </UnderlineText>
-            <UnderlineText onPress={removeAll} style={styles.text}>
+            <UnderlineText onPress={removeAllPersons} style={styles.text}>
               remove all
             </UnderlineText>
           </TopBar>
@@ -86,6 +69,7 @@ export default function People() {
             onLeftToRight={goLeft}
             onRightToLeft={goRight}>
             <FlatList
+              ref={flatListRef}
               scrollEnabled={scrollEnabled}
               data={people}
               renderItem={({item}) => (
